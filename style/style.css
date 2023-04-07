@@ -1,0 +1,321 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    font-family: var(--pd);
+    font-weight: 400;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    border: none;
+    outline: none;
+    background: none;
+    user-select: none;
+}
+:root{
+    --su: system-ui;
+    --pd: 'Playfair Display', serif; 
+    --tq: #41A28E;
+} 
+body{
+    max-width: 1920px;
+    width: 100%;
+    margin: auto;
+} 
+.container{
+    max-width: 1140px;
+    width: 100%;
+    margin: auto;
+    padding: 0 15px;
+}
+.header-nav{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 25px 0;
+    align-items: center;
+    position: relative;
+}
+.burger{
+    width: 50px;
+    height: 50px;
+    display: none;
+}
+.header-nav-list{
+    display: flex;
+    gap: 40px;
+}
+.header-nav-list a{
+    font-size: 12px;
+    color: black;
+}
+.header-nav form{
+    display: flex;
+    gap: 4px;
+    transition: 0.3s;
+}
+.header-nav form input{
+    border: 1px solid var(--tq);
+    padding: 6px 0 6px 12px;
+    color: #4B4848;
+    font-family: var(--su);
+}
+.form-burg{
+    order: 1;
+    display: flex;
+    align-items: center;
+    transition: 0.4s;
+}
+.header-nav form button{
+    background: var(--tq);
+    padding: 7px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.dropdown{
+    position: absolute;
+    top: 35px;
+    background: #FFFFFF;
+    border: 1px solid #E5E5E5;
+    border-radius: 2px; 
+    width: 160px;
+    visibility: hidden;
+    transition: 0.3s;
+    opacity: 0;
+    transform: translateY(-20%);
+}
+.dropdown a{
+    padding: 12px 30px;
+    display: block;
+    border: 1px solid #E5E5E5;
+}
+.dropdown__trigger{
+    position: relative;  
+}
+.dropdown__trigger input{
+    position: absolute;
+    left: -1px;
+    top: 6px;
+    opacity: 0;
+    cursor: pointer;
+}
+.dropdown__trigger input:checked ~ .dropdown{
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+}
+.header-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: url(../img/header-bgd.png);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    color: white;
+}
+h1{
+    font-size: 50px;
+    padding: 17px 51px;
+    background: rgba(0, 0, 0, 0.7);
+}
+.header-content p{
+    font-size: 22px;
+    margin: 30px 0 50px;
+}
+.btn{
+    background: white;
+    padding: 22px 35px;
+    font-size: 12px;
+    color: black;
+    transition: 0.3s;
+    display: block;
+    width: max-content;
+}
+.btn:hover{
+    color: white;
+    background: var(--tq);
+    transform: scale(1.1);
+}
+.commerce-cards{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    text-align: center;
+    margin: 48px 0 52px;
+}
+.commerce-cards .card img{
+    display: block;
+}
+.commerce-cards .card{
+    position: relative;
+    color: white;
+    overflow: hidden;
+}
+.commerce-cards .card span{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    font-size: 25px;
+    background: rgba(75, 72, 72, 0.7);
+    padding: 2px 0;
+    transform: translateY(115%);
+    transition: 0.2s;
+}
+.commerce-cards .card:hover span{
+    transform: translateY(0);
+}
+.main-title, .main-descr{
+    text-align: center;
+    
+}
+.main-title{
+    font-size: 50px;
+    margin-bottom: 18px;
+}
+.main-descr{
+    font-family: var(--su);
+    color: #666666;
+    line-height: 19px;
+    max-width: 496px;
+    margin: auto;
+}
+.collection{
+    background: url(../img/collection-bg.jpg) ;
+    background-size: cover;
+    background-position: center;
+    margin: 72px 0 50px;
+    padding: 120px 0 112px;
+}
+.collection h2{
+    font-size: 20px;
+    color: white;
+}
+.collection p{
+    color: white;
+    font-size: 50px;
+    margin: 3px 0 22px;
+}
+.custom-card{
+    width: 255px;
+}
+.custom-card-info{
+    position: relative;
+    margin-bottom: 43px;
+}
+.custom-card-info-add{
+    position: absolute;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 17px 19px;
+    opacity: 0.2;
+    transition: 0.4s;
+}
+.custom-card-info:hover .custom-card-info-add{
+    opacity: 1;
+}
+.custom-card-info > img{
+    display: block;
+}
+.custom-card-info-add > a{
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    font-size: 12px;
+    color: white;
+    width: 150px;
+}
+.custom-card-info-add div{
+    display: flex;
+    gap: 22px;
+}
+.custom .container{
+    margin-top: 69px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+.old-price{
+    color: #666666;
+    text-decoration: line-through;
+    padding-right: 15px;
+}
+.out, .sale{
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 18px;
+    background: #4B484B;
+    font-size: 12px;
+    color: white;
+}
+.custom{
+    margin-bottom: 50px;
+}
+.footer{
+    background: black;
+    padding: 36px 0;
+}
+.footer .container{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+.footer h2{
+    font-size: 24px;
+    color: white;
+    margin-bottom: 40px;
+}
+.footer-list{
+    width: 255px;
+}
+.footer-list a{
+    font-size: 14px;
+    line-height: 16px;
+    color: white;
+    padding: 9px 0;
+    display: block;
+}
+.footer-list:last-of-type a{
+    display: flex;
+    gap: 10px;
+}
+.footer-form{
+    width: 255px;
+    color: white;
+}
+.footer-form input{
+    padding: 12px 10px;
+    color: #909090;
+    background: white;
+    font-size: 14px;
+    font-family: var(--su);
+    margin-bottom: 20px;
+    position: relative;
+}
+.footer-form button{
+    position: absolute;
+    padding: 12px 10px;
+    font-size: 14px;
+    background: var(--tq);
+    color: white;
+    font-family: var(--su);
+}
+.footer-form p{
+    color: white;
+    font-family: var(--su);
+    margin-bottom: 21px;
+}
+.footer-form-partners{
+    display: flex;
+    gap: 25px;
+}
